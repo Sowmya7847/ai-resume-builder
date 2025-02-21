@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(139, 92, 246, 0.9));
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+label, input, textarea, select, button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4c51bf;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #6d28d9;
+}
+
+.hidden {
+    display: none;
+}
+
+#resumePreview, #suggestions {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Themes */
+body.dark {
+    background: black;
+    color: white;
+}
+
+body.light {
+    background: white;
+    color: black;
+}
+
+body.blueviolet {
+    background: linear-gradient(135deg, #6a5acd, #8a2be2);
+}
+
+body.transparent {
+    background: none;
+}
