@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>AI-Powered Resume Builder</h1>
+        
+        <form id="resumeForm">
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" accept="image/*" onchange="previewPhoto()">
+            <img id="photoPreview" src="" alt="Photo Preview" style="display:none; width: 100px; height: 100px; border-radius: 50%;">
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="education">Education:</label>
+            <textarea id="education" rows="2" required></textarea>
+
+            <label for="experience">Work Experience:</label>
+            <textarea id="experience" rows="3" required></textarea>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" rows="2" required></textarea>
+
+            <label for="job">Job Description (for AI Analysis):</label>
+            <textarea id="job" rows="3"></textarea>
+
+            <label for="theme">Choose Theme:</label>
+            <select id="theme" onchange="applyTheme()">
+                <option value="default">Default</option>
+                <option value="transparent">Transparent</option>
+                <option value="blueviolet">Blue & Violet</option>
+                <option value="dark">Dark Mode</option>
+                <option value="light">Light Mode</option>
+            </select>
+
+            <label for="template">Choose Resume Template:</label>
+            <select id="template" onchange="generateResume()">
+                <option value="classic">Classic</option>
+                <option value="modern">Modern</option>
+                <option value="creative">Creative</option>
+            </select>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+            <button type="button" onclick="analyzeResume()">AI Optimize</button>
+        </form>
+
+        <h2>Resume Preview</h2>
+        <div id="resumePreview"></div>
+
+        <h2>AI Suggestions</h2>
+        <div id="suggestions"></div>
+
+        <h2>Share Resume</h2>
+        <button onclick="downloadResume()">Download PDF</button>
+        <button onclick="shareByEmail()">Share via Email</button>
+        <button onclick="shareOnWhatsApp()">Share on WhatsApp</button>
+        <button onclick="copyLink()">Copy Link</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
